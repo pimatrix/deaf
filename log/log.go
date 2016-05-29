@@ -79,7 +79,8 @@ func New(levelname string, pathname string) (*Logger, error) {
     }
 
     baseFile = file
-    baseLogger = log.New(file, "", log.LstdFlags|log.Llongfile)
+    baseLogger = log.New(file, "", log.LstdFlags)
+    // baseLogger = log.New(file, "", log.LstdFlags|log.Llongfile)
 
     // 校验
     if baseLogger == nil {
