@@ -19,24 +19,9 @@ import (
 func main() {
 
     name := "djx"
-    log.Debug("My name is %v", name)
-    log.Release("My name is %v", name)
-    log.Error("My name is %v", name)
-    // log.Fatal("My name is %v", name)
-
-    // logger, err := log.New("debug", "test_djx_log")
-    // if err != nil {
-    //     return
-    // }
-    // defer logger.Close()
-
-    log.Debug("will not print")
-    log.Release("My name is %v", name)
-
-    // log.Export(logger)
-
-    log.Debug("will not print")
-    log.Release("My name is %v", name)
+    log.Deg("My name is %v", name)
+    log.Inf("My name is %v", name)
+    log.War("will print")
 }
 
 

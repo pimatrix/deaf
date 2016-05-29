@@ -134,15 +134,15 @@ func (logger *Logger) Debug(format string, a ...interface{}) {
     logger.doPrintf(kDebug, kDebugName, format, a...)
 }
 
-func (logger *Logger) Release(format string, a ...interface{}) {
+func (logger *Logger) Info(format string, a ...interface{}) {
     logger.doPrintf(kInfo, kInfoName, format, a...)
 }
 
-func (logger *Logger) Error(format string, a ...interface{}) {
+func (logger *Logger) Warn(format string, a ...interface{}) {
     logger.doPrintf(kWarn, kWarnName, format, a...)
 }
 
-func (logger *Logger) Fatal(format string, a ...interface{}) {
+func (logger *Logger) Error(format string, a ...interface{}) {
     logger.doPrintf(kError, kErrorName, format, a...)
 }
 
@@ -155,20 +155,20 @@ func Export(logger *Logger) {
     }
 }
 
-func Debug(format string, a ...interface{}) {
+func Deg(format string, a ...interface{}) {
     gLogger.Debug(format, a...)
 }
 
-func Release(format string, a ...interface{}) {
-    gLogger.Release(format, a...)
+func Inf(format string, a ...interface{}) {
+    gLogger.Info(format, a...)
 }
 
-func Error(format string, a ...interface{}) {
+func War(format string, a ...interface{}) {
+    gLogger.Warn(format, a...)
+}
+
+func Err(format string, a ...interface{}) {
     gLogger.Error(format, a...)
-}
-
-func Fatal(format string, a ...interface{}) {
-    gLogger.Fatal(format, a...)
 }
 
 func Close() {
